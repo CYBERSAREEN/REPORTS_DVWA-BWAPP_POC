@@ -30,9 +30,6 @@ REPORTS_DVWA-BWAPP_POC/
 │
 ├── DVWA/
 │   ├── SQL_Injection/
-│   │   ├── report.md
-│   │   ├── poc.md
-│   │   └── screenshots/
 │   ├── XSS_Reflected/
 │   ├── XSS_Stored/
 │   ├── XSS_DOM/
@@ -60,10 +57,7 @@ REPORTS_DVWA-BWAPP_POC/
 │   ├── CORS_Misconfiguration/
 │   └── Insecure_DOR/
 │
-├── templates/
-│   ├── report_template.md
-│   └── poc_template.md
-│
+|
 └── README.md
 ```
 
@@ -73,47 +67,47 @@ REPORTS_DVWA-BWAPP_POC/
 
 ### 🔴 DVWA
 
-| #  | Vulnerability                  | CWE     | CVE (Reference) | CVSS v3.1 | Severity | Report | PoC |
-| -- | ------------------------------ | ------- | --------------- | --------- | -------- | ------ | --- |
-| 1  | SQL Injection                  | CWE-89  | CVE-2012-1823   | 9.8       | Critical | ⬜     | ⬜  |
-| 2  | Blind SQL Injection            | CWE-89  | CVE-2012-1823   | 9.8       | Critical | ⬜     | ⬜  |
-| 3  | XSS (Reflected)                | CWE-79  | CVE-2023-32315  | 6.1       | Medium   | ⬜     | ⬜  |
-| 4  | XSS (Stored)                   | CWE-79  | CVE-2023-32315  | 8.0       | High     | ⬜     | ⬜  |
-| 5  | XSS (DOM)                      | CWE-79  | CVE-2023-32315  | 6.1       | Medium   | ⬜     | ⬜  |
-| 6  | CSRF                           | CWE-352 | CVE-2020-11022  | 6.5       | Medium   | ⬜     | ⬜  |
-| 7  | File Upload                    | CWE-434 | CVE-2021-44228  | 9.8       | Critical | ⬜     | ⬜  |
-| 8  | File Inclusion (LFI/RFI)       | CWE-98  | CVE-2012-1823   | 9.8       | Critical | ⬜     | ⬜  |
-| 9  | Command Injection              | CWE-78  | CVE-2014-6271   | 10.0      | Critical | ⬜     | ⬜  |
-| 10 | Brute Force                    | CWE-307 | CVE-2019-11043  | 7.5       | High     | ⬜     | ⬜  |
-| 11 | IDOR                           | CWE-639 | CVE-2020-24553  | 5.4       | Medium   | ⬜     | ⬜  |
-| 12 | Weak Session IDs               | CWE-330 | CVE-2020-7699   | 7.5       | High     | ⬜     | ⬜  |
-| 13 | JavaScript Attacks             | CWE-345 | —              | 5.3       | Medium   | ⬜     | ⬜  |
-| 14 | Content Security Policy Bypass | CWE-693 | —              | 6.1       | Medium   | ⬜     | ⬜  |
+| #   | Vulnerability                  | CWE     | CVE (Reference) | CVSS v3.1 | Severity | Report | PoC |
+| --- | ------------------------------ | ------- | --------------- | --------- | -------- | ------ | --- |
+| 1   | SQL Injection                  | CWE-89  | CVE-2012-1823   | 9.8       | Critical | ✅     | ✅  |
+| 2   | Blind SQL Injection            | CWE-89  | CVE-2012-1823   | 9.8       | Critical | ✅     | ✅  |
+| 3   | XSS (Reflected)                | CWE-79  | CVE-2023-32315  | 6.1       | Medium   | ⬜     | ⬜  |
+| 4   | XSS (Stored)                   | CWE-79  | CVE-2023-32315  | 8.0       | High     | ⬜     | ⬜  |
+| 5   | XSS (DOM)                      | CWE-79  | CVE-2023-32315  | 6.1       | Medium   | ⬜     | ⬜  |
+| 6   | CSRF                           | CWE-352 | CVE-2020-11022  | 6.5       | Medium   | ⬜     | ⬜  |
+| 7   | File Upload                    | CWE-434 | CVE-2021-44228  | 9.8       | Critical | ⬜     | ⬜  |
+| 8   | File Inclusion (LFI/RFI)       | CWE-98  | CVE-2012-1823   | 9.8       | Critical | ⬜     | ⬜  |
+| 9   | Command Injection              | CWE-78  | CVE-2014-6271   | 10.0      | Critical | ⬜     | ⬜  |
+| 10  | Brute Force                    | CWE-307 | CVE-2019-11043  | 7.5       | High     | ⬜     | ⬜  |
+| 11  | IDOR                           | CWE-639 | CVE-2020-24553  | 5.4       | Medium   | ⬜     | ⬜  |
+| 12  | Weak Session IDs               | CWE-330 | CVE-2020-7699   | 7.5       | High     | ⬜     | ⬜  |
+| 13  | JavaScript Attacks             | CWE-345 | —               | 5.3       | Medium   | ⬜     | ⬜  |
+| 14  | Content Security Policy Bypass | CWE-693 | —               | 6.1       | Medium   | ⬜     | ⬜  |
 
 ### 🟠 bWAPP
 
-| #  | Vulnerability                    | CWE      | CVE (Reference) | CVSS v3.1 | Severity | Report | PoC |
-| -- | -------------------------------- | -------- | --------------- | --------- | -------- | ------ | --- |
-| 1  | HTML Injection (Reflected)       | CWE-80   | —              | 6.1       | Medium   | ⬜     | ⬜  |
-| 2  | HTML Injection (Stored)          | CWE-80   | —              | 8.0       | High     | ⬜     | ⬜  |
-| 3  | SQL Injection (GET/POST)         | CWE-89   | CVE-2012-1823   | 9.8       | Critical | ⬜     | ⬜  |
-| 4  | SQL Injection (AJAX/JSON)        | CWE-89   | CVE-2012-1823   | 9.8       | Critical | ⬜     | ⬜  |
-| 5  | XXE Injection                    | CWE-611  | CVE-2021-44228  | 9.1       | Critical | ⬜     | ⬜  |
-| 6  | SSRF                             | CWE-918  | CVE-2021-26855  | 9.8       | Critical | ⬜     | ⬜  |
-| 7  | LDAP Injection                   | CWE-90   | —              | 7.5       | High     | ⬜     | ⬜  |
-| 8  | OS Command Injection             | CWE-78   | CVE-2014-6271   | 10.0      | Critical | ⬜     | ⬜  |
-| 9  | PHP Code Injection               | CWE-94   | —              | 9.8       | Critical | ⬜     | ⬜  |
-| 10 | Server-Side Template Injection   | CWE-94   | CVE-2022-22954  | 9.8       | Critical | ⬜     | ⬜  |
-| 11 | XML Injection                    | CWE-91   | —              | 7.5       | High     | ⬜     | ⬜  |
-| 12 | iFrame Injection                 | CWE-79   | —              | 6.1       | Medium   | ⬜     | ⬜  |
-| 13 | Open Redirect                    | CWE-601  | CVE-2022-33891  | 6.1       | Medium   | ⬜     | ⬜  |
-| 14 | Clickjacking                     | CWE-1021 | —              | 4.3       | Medium   | ⬜     | ⬜  |
-| 15 | CORS Misconfiguration            | CWE-942  | —              | 7.4       | High     | ⬜     | ⬜  |
-| 16 | Insecure Direct Object Reference | CWE-639  | —              | 5.4       | Medium   | ⬜     | ⬜  |
-| 17 | Unrestricted File Upload         | CWE-434  | —              | 9.8       | Critical | ⬜     | ⬜  |
-| 18 | Sensitive Data Exposure          | CWE-200  | —              | 7.5       | High     | ⬜     | ⬜  |
-| 19 | Broken Auth / Session Mgmt       | CWE-287  | —              | 9.8       | Critical | ⬜     | ⬜  |
-| 20 | Security Misconfiguration        | CWE-16   | —              | 7.5       | High     | ⬜     | ⬜  |
+| #   | Vulnerability                    | CWE      | CVE (Reference) | CVSS v3.1 | Severity | Report | PoC |
+| --- | -------------------------------- | -------- | --------------- | --------- | -------- | ------ | --- |
+| 1   | HTML Injection (Reflected)       | CWE-80   | —               | 6.1       | Medium   | ⬜     | ⬜  |
+| 2   | HTML Injection (Stored)          | CWE-80   | —               | 8.0       | High     | ⬜     | ⬜  |
+| 3   | SQL Injection (GET/POST)         | CWE-89   | CVE-2012-1823   | 9.8       | Critical | ⬜     | ⬜  |
+| 4   | SQL Injection (AJAX/JSON)        | CWE-89   | CVE-2012-1823   | 9.8       | Critical | ⬜     | ⬜  |
+| 5   | XXE Injection                    | CWE-611  | CVE-2021-44228  | 9.1       | Critical | ⬜     | ⬜  |
+| 6   | SSRF                             | CWE-918  | CVE-2021-26855  | 9.8       | Critical | ⬜     | ⬜  |
+| 7   | LDAP Injection                   | CWE-90   | —               | 7.5       | High     | ⬜     | ⬜  |
+| 8   | OS Command Injection             | CWE-78   | CVE-2014-6271   | 10.0      | Critical | ⬜     | ⬜  |
+| 9   | PHP Code Injection               | CWE-94   | —               | 9.8       | Critical | ⬜     | ⬜  |
+| 10  | Server-Side Template Injection   | CWE-94   | CVE-2022-22954  | 9.8       | Critical | ⬜     | ⬜  |
+| 11  | XML Injection                    | CWE-91   | —               | 7.5       | High     | ⬜     | ⬜  |
+| 12  | iFrame Injection                 | CWE-79   | —               | 6.1       | Medium   | ⬜     | ⬜  |
+| 13  | Open Redirect                    | CWE-601  | CVE-2022-33891  | 6.1       | Medium   | ⬜     | ⬜  |
+| 14  | Clickjacking                     | CWE-1021 | —               | 4.3       | Medium   | ⬜     | ⬜  |
+| 15  | CORS Misconfiguration            | CWE-942  | —               | 7.4       | High     | ⬜     | ⬜  |
+| 16  | Insecure Direct Object Reference | CWE-639  | —               | 5.4       | Medium   | ⬜     | ⬜  |
+| 17  | Unrestricted File Upload         | CWE-434  | —               | 9.8       | Critical | ⬜     | ⬜  |
+| 18  | Sensitive Data Exposure          | CWE-200  | —               | 7.5       | High     | ⬜     | ⬜  |
+| 19  | Broken Auth / Session Mgmt       | CWE-287  | —               | 9.8       | Critical | ⬜     | ⬜  |
+| 20  | Security Misconfiguration        | CWE-16   | —               | 7.5       | High     | ⬜     | ⬜  |
 
 > ✅ = Completed &nbsp;&nbsp; 🔄 = In Progress &nbsp;&nbsp; ⬜ = Pending
 
